@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Logs - scala-spinup-check</title>
+<style type="text/css">
+@import "/css/compiled.26.339819589336962379.css";
+</style>
+<script src="/js/compiled.26.339819589336962379.js"></script>
+</head>
+<body>
+<div
+
+      class="g-doc">
+<div id="hd" class="g-section g-tpl-50-50 g-split"
+     style="background-color: white">
+<div class="g-unit g-first">
+<p>
+<a href="/" id="ae-logo" class="ae-ir">
+<span>Google App Engine</span>
+</a>
+</p>
+</div>
+<div class="g-unit" id="ae-userinfo">
+<ul>
+<li>
+<strong>
+helmettomo@gmail.com
+</strong> |
+</li>
+<li>
+<a href="https://www.google.com/accounts/ManageAccount">My Account</a> |
+</li>
+<li>
+<a href="http://code.google.com/appengine/kb/">Help</a> |
+</li>
+<li>
+<a href="https://appengine.google.com/_ah/logout?continue=https://www.google.com/accounts/Logout%3Fcontinue%3Dhttps://appengine.google.com/start%26service%3Dah">Sign out</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="ae-appbar-lrg">
+<div class="g-section g-tpl-75-25 g-split">
+<div class="g-unit g-first">
+<form id="ae-appbar-apps" method="get" accept-charset="utf-8" action="/logs">
+<label for="ae-appbar-app-id">Application:</label>
+<select id="ae-appbar-app-id" name="app_id">
+<option value="czeventengine"
+
+> czeventengine </option>
+<option value="eho-ohs"
+
+> eho-ohs </option>
+<option value="ehoutter"
+
+> ehoutter </option>
+<option value="liftropy"
+
+> liftropy </option>
+<option value="scala-spinup-check"
+
+  selected="selected"
+
+> scala-spinup-check </option>
+<option value="twitter-chu2-name"
+
+> twitter-chu2-name </option>
+<option value="yuroyoro-bots"
+
+> yuroyoro-bots </option>
+<option value="yuroyoro-hello-world"
+
+> yuroyoro-hello-world </option>
+<option value="yuroyoro-kay-sample"
+
+> yuroyoro-kay-sample </option>
+</select>
+<input type="submit" value="Go">
+</form>
+<form id="ae-appbar-versions" method="get" action="" accept-charset="utf-8">
+<input id="ae-appbar-versions-app-id" name="app_id" type="hidden" value="scala-spinup-check">
+<label for="version_id">Version:</label>
+<select id="version_id" name="version_id">
+<option value="listscala.340664298593853084"
+
+> listscala </option>
+<option value="simplescala.340664240352606159"
+
+  selected="selected"
+
+> simplescala </option>
+<option value="slim3scala.340664194338114631"
+
+> slim3scala </option>
+</select>
+<input type="submit" value="Go">
+</form>
+</div>
+<div class="g-unit">
+<a href="/">&laquo; Show All Applications</a>
+</div>
+</div>
+</div>
+<script type="text/javascript"><!--
+  ae.Header.init();
+//--></script>
+<div id="bd" class="g-section g-tpl-160">
+<div id="ae-lhs-nav-c" class="g-unit g-first">
+<div id="ae-lhs-nav" class="g-c">
+<div id="ae-nav">
+<ul>
+<li id="ae-nav-dashboard">
+<span
+            class="ae-nav-section">
+Main
+</span>
+<ul>
+<li>
+<a
+                  href="/dashboard?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Dashboard
+</a>
+</li>
+<li>
+<a
+                  href="/dashboard/quotadetails?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Quota Details
+</a>
+</li>
+<li>
+<a
+                  href="/logs?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                    class="ae-nav-selected"
+
+                  >
+Logs
+</a>
+</li>
+<li>
+<a
+                  href="/cron?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Cron Jobs
+</a>
+</li>
+<li>
+<a
+                  href="/queues?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Task Queues
+</a>
+</li>
+</ul>
+</li>
+<li id="ae-nav-datastore">
+<span
+            class="ae-nav-section">
+Data
+</span>
+<ul>
+<li>
+<a
+                  href="/datastore/indexes?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Datastore Indexes
+</a>
+</li>
+<li>
+<a
+                  href="/datastore/explorer?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Datastore Viewer
+</a>
+</li>
+<li>
+<a
+                  href="/datastore/statistics?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Datastore Statistics
+</a>
+</li>
+<li>
+<a
+                  href="/blobstore/explorer?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Blob Viewer
+</a>
+</li>
+</ul>
+</li>
+<li id="ae-nav-administration">
+<span
+            class="ae-nav-section">
+Administration
+</span>
+<ul>
+<li>
+<a
+                  href="/domain?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Application Settings
+</a>
+</li>
+<li>
+<a
+                  href="/permissions?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Developers
+</a>
+</li>
+<li>
+<a
+                  href="/deployment?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Versions
+</a>
+</li>
+<li>
+<a
+                  href="/adminlogs?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Admin Logs
+</a>
+</li>
+</ul>
+</li>
+<li id="ae-nav-billing">
+<span
+            class="ae-nav-section">
+Billing
+</span>
+<ul>
+<li>
+<a
+                  href="/billing/settings?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Billing Settings
+</a>
+</li>
+<li>
+<a
+                  href="/billing/history?&app_id=scala-spinup-check&version_id=simplescala.340664240352606159"
+
+                  >
+Billing History
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="ae-nav-group ae-rounded-sml">
+<h4 class="ae-resources">
+Resources
+</h4>
+<ul id="ae-nav-resources">
+<li>
+<a target="_blank" href="http://code.google.com/appengine">Documentation</a>
+</li>
+<li>
+<a target="_blank" href="http://code.google.com/appengine/kb/">FAQ</a>
+</li>
+<li>
+<a target="_blank "href="http://groups.google.com/group/google-appengine">Developer Forum</a>
+</li>
+<li>
+<a target="_blank" href="http://code.google.com/appengine/downloads.html">Downloads</a>
+</li>
+<li>
+<a target="_blank" href="http://code.google.com/status/appengine">System Status</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="ae-content" class="g-unit">
+<input id="ae-logs-url" type="hidden" value="/logs?app_id=scala-spinup-check&amp;version_id=simplescala.340664240352606159&amp;logs_form=1&amp;severity_level=1&amp;include_req_logs=True&amp;limit=50&amp;date_type=now&amp;date=2010-03-20&amp;time=07%3A48%3A12&amp;filter_type=regex&amp;filter=&amp;view=View">
+<div id="ae-logs-c">
+<div id="ae-logs-form-c" class="ae-message ae-rounded-sml">
+Filter Logs <a href="http://code.google.com/appengine/articles/logging.html" target="_blank"><img class="ae-help-icon" src="/img/help.gif" height="14" width="14" alt="help"></a>
+<div id="ae-logs-form">
+<form method="get" action="/logs">
+<input name="app_id" type="hidden" value="scala-spinup-check">
+<input name="version_id" type="hidden" value="simplescala.340664240352606159">
+<input name="logs_form" type="hidden" value="1">
+<div class="ae-label-row">
+<label for="severity_level">Minimum Severity:</label>
+</div>
+<div class="ae-input-row">
+<span>
+<select name="severity_level" id="ae-logs-severity-level">
+<option
+                  value="0"
+
+                  >
+Debug
+</option>
+<option
+                  value="1"
+
+                  selected="selected"
+
+                  >
+Info
+</option>
+<option
+                  value="2"
+
+                  >
+Warning
+</option>
+<option
+                  value="3"
+
+                  >
+Error
+</option>
+<option
+                  value="4"
+
+                  >
+Critical
+</option>
+<option value=""
+
+
+                >
+Requests only
+</option>
+</select>
+</span>
+</div>
+<div id="ae-logs-form-options">
+<div class="ae-input-row">
+<input
+              name="include_req_logs"
+              id="include_req_logs"
+              type="checkbox"
+              value="True"
+
+              checked="checked"
+
+              >
+<label for="include_req_logs">include request logs</label>
+</div>
+<div class="ae-label-row">
+<label for="ae-logs-limit">Return rows:</label>
+</div>
+<div class="ae-input-row">
+<select id="ae-logs-limit" name="limit">
+<option
+
+                >10</option>
+<option
+
+                >20</option>
+<option
+
+                selected="selected"
+
+              >50</option>
+</select>
+</div>
+<div class="ae-label-row">
+Show at or before:
+</div>
+<div class="ae-input-row">
+<div class="ae-radio">
+<label for="ae-logs-date-type-now">
+<input id="ae-logs-date-type-now" type="radio" name="date_type" value="now"
+
+                checked="checked"
+
+                >
+Now
+</label>
+</div>
+<div class="ae-radio">
+<input id="ae-logs-date-type-date" type="radio" name="date_type" value="datetime"
+
+              >
+<input id="ae-logs-date" name="date" type="text" size="8" value="2010-03-20">
+<input id="ae-logs-time" name="time" type="text" size="10" value="07:48:21">
+</div>
+</div>
+<div class="ae-label-row">
+<label for="filter">Filter:</label>
+</div>
+<div class="ae-input-row">
+<div class="ae-radio">
+<label for="ae-logs-filter-type-regex">
+<input id="ae-logs-filter-type-regex" type="radio" name="filter_type" value="regex"
+
+                checked="checked"
+
+                >
+Regex
+</label>
+<label for="ae-logs-filter-type-labels">
+<input id="ae-logs-filter-type-labels" type="radio" name="filter_type" value="labels"
+
+                >
+Labels
+</label>
+</div>
+</div>
+<div class="ae-input-row">
+<input id="filter" name="filter" type="text" size="40"
+                   value="">
+<div id="ae-logs-filter-hint-regex" class="ae-field-hint">
+Regex filters are case-sensitive
+<a target="_blank"
+                 href="http://www.python.org/doc/2.5.2/lib/re-syntax.html"
+                >regular expressions</a>, e.g. <em>^[tT]raceback</em> or <em>hello.*rld</em>
+</div>
+<div id="ae-logs-filter-hint-labels" class="ae-field-hint">
+Labels are
+<a
+                target="_blank"
+                href="http://www.python.org/doc/2.5.2/lib/re-syntax.html"
+                >regular expressions</a>
+for filtering
+<a target="_blank"
+                href="http://httpd.apache.org/docs/1.3/logs.html#combined"
+                >Apache Combined logs</a>
+by logging fields.
+<div id="ae-logs-filter-hint-labels-list" class="g-section">
+<span>Valid labels:</span>
+<ul>
+<li>
+day,
+</li>
+<li>
+month,
+</li>
+<li>
+year,
+</li>
+<li>
+hour,
+</li>
+<li>
+minute,
+</li>
+<li>
+second,
+</li>
+<li>
+tzone,
+</li>
+<li>
+remotehost,
+</li>
+<li>
+identd_user,
+</li>
+<li>
+user,
+</li>
+<li>
+status,
+</li>
+<li>
+bytes,
+</li>
+<li>
+referrer,
+</li>
+<li>
+useragent,
+</li>
+<li>
+method,
+</li>
+<li>
+path,
+</li>
+<li>
+querystring,
+</li>
+<li>
+protocol
+</li>
+</ul>
+</div>
+e.g. <em>path:/foo.*useragent:.*Chrome.*</em> - all requests to a path starting with /foo from the Chrome browser.
+</div>
+</div>
+<div class="ae-btn-row">
+<input value="View" type="submit" name="view">
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="g-section g-tpl-50-50 g-split">
+<div class="g-unit g-first">
+<strong>Tip:</strong> Click a log line to show or hide its details.
+</div>
+<div class="g-unit">
+<div id="ae-logs-expand"></div>
+</div>
+</div>
+<div id="ae-logs">
+<ol
+  id="ae-logs-0"
+
+  >
+<li class="ae-table-caption">
+<div class="ae-paginate">
+<span class="ae-disabled ae-paginate-prev"
+        >‹ Prev 50</span>
+<strong>
+1-50
+</strong>
+<span class="ae-disabled ae-paginate-next"
+        >Next 50 ›</span>
+</div>
+</li>
+<li id="ae-log-0004823B8D69A55C.9B64CE5C" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 06:36AM 31.721</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">2313ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B8D69A55C.9B64CE5C&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:06:36:34 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 06:36AM 33.843</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823B7791BD0A.B27D1DC8" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 06:30AM 26.531</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1031ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B7791BD0A.B27D1DC8&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:06:30:27 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 06:30AM 27.440</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823B61BE4E72.71414962" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 06:24AM 20.013</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1372ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B61BE4E72.71414962&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:06:24:21 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 06:24AM 21.180</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823B4B5F246E.C2AD86DD" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 06:18AM 03.039</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">3010ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B4B5F246E.C2AD86DD&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:06:18:06 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 06:18AM 05.889</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823B35741FF8.87159508" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 06:11AM 57.321</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1005ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B35741FF8.87159508&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:06:11:58 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 06:11AM 58.166</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823B1F72834F.7D5B0253" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 06:05AM 47.753</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1368ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+952cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B1F72834F.7D5B0253&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:06:05:49 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 06:05AM 48.877</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823B091B52A2.4B38FDB9" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:59AM 22.889</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">11419ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+952cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823B091B52A2.4B38FDB9&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:59:34 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:59AM 34.085</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823AF29E3323.8BDD499D" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:53AM 13.556</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">3454ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823AF29E3323.8BDD499D&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:53:17 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:53AM 16.889</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823ADC231A08.28D914BB" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:46AM 58.439</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1405ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823ADC231A08.28D914BB&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:46:59 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:46AM 59.668</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823AC6514F6F.39543B09" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:40AM 52.855</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">918ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823AC6514F6F.39543B09&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:40:53 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:40AM 53.656</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823AB08D46BE.93FF2AC3" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:34AM 42.791</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">5813ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823AB08D46BE.93FF2AC3&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:34:48 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:34AM 48.412</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A9A796BA5.CC945567" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:28AM 37.155</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1050ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+816cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A9A796BA5.CC945567&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:28:38 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:28AM 38.091</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A84A11039.2F1119AE" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:22AM 30.137</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1567ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A84A11039.2F1119AE&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:22:31 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:22AM 31.551</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A6ECDC39A.387EDEF6" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:16AM 17.352</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">8182ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A6ECDC39A.387EDEF6&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:16:25 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:16AM 25.397</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A589A987E.A44EA214" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:10AM 12.099</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">983ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+855cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A589A987E.A44EA214&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:10:13 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:10AM 12.964</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A42CDA21F.97B1C2FD" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 05:04AM 05.854</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1474ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A42CDA21F.97B1C2FD&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:05:04:07 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 05:04AM 07.211</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A2CF66293.B0C8E46C" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:57AM 59.987</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">913ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+855cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A2CF66293.B0C8E46C&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:58:00 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:58AM 00.789</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A168424DB.EEBE5906" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:51AM 41.227</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">3088ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A168424DB.EEBE5906&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:51:44 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:51AM 44.128</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823A005A6A5B.85183CF1" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:45AM 31.378</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1103ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+855cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823A005A6A5B.85183CF1&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:45:32 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:45AM 32.310</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048239EA62C0B5.DE1D50B6" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:39AM 22.802</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1126ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+816cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048239EA62C0B5.DE1D50B6&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:39:23 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:39AM 23.809</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048239D4712299.24ADA45B" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:33AM 10.952</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">4820ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+952cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048239D4712299.24ADA45B&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:33:15 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:33AM 15.616</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048239BE703389.37AEDC27" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:27AM 05.479</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1133ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+952cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048239BE703389.37AEDC27&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:27:06 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:27AM 06.450</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048239A8A09F60.1B971F29" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:20AM 59.581</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1107ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048239A8A09F60.1B971F29&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:21:00 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:21AM 00.512</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823992D66F10.5EDA3D71" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:14AM 54.077</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1038ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823992D66F10.5EDA3D71&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:14:55 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:14AM 54.964</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823976E3B742.EB7559B4" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:07AM 02.923</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">3301ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+971cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823976E3B742.EB7559B4&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:07:06 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:07AM 05.971</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482396100A38E.322F29E9" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 04:00AM 58.073</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">947ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482396100A38E.322F29E9&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:04:00:59 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 04:00AM 58.893</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482394B446FE7.5F2810B4" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:54AM 53.347</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1017ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482394B446FE7.5F2810B4&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:54:54 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:54AM 54.215</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048239357EB4C7.9F8DC30C" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:48AM 48.175</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">910ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+835cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048239357EB4C7.9F8DC30C&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:48:49 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:48AM 48.961</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482391FB1BF02.CC22C10A" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:42AM 42.192</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1139ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482391FB1BF02.CC22C10A&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:42:43 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:42AM 43.168</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823909E170A7.8C2AD31F" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:36AM 36.214</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1144ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+855cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823909E170A7.8C2AD31F&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:36:37 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:36AM 37.226</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238F410CDF9.3EF24D33" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:30AM 30.368</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">995ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238F410CDF9.3EF24D33&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:30:31 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:30AM 31.209</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238DE16197B.E568F0EB" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:24AM 20.864</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1748ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238DE16197B.E568F0EB&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:24:22 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:24AM 22.484</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238C83B4EE9.902DDF8D" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:18AM 14.451</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1500ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+777cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238C83B4EE9.902DDF8D&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:18:15 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:18AM 15.769</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238B261BAAA.2F92F8E4" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:12AM 08.155</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1216ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+952cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238B261BAAA.2F92F8E4&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:12:09 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:12AM 09.199</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482389C4A3374.2634F0BA" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 03:05AM 57.556</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1174ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482389C4A3374.2634F0BA&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:03:05:58 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 03:05AM 58.557</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238867CC447.CC3DB2DB" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:59AM 48.566</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">4379ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238867CC447.CC3DB2DB&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:59:52 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:59AM 52.339</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238559A7A22.6692642D" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:46AM 11.398</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1411ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238559A7A22.6692642D&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:46:12 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:46AM 12.671</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482383FC7DB2F.C032801C" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:40AM 05.165</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1518ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482383FC7DB2F.C032801C&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:40:06 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:40AM 06.543</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823829F2BC83.E837D413" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:33AM 59.210</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1185ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823829F2BC83.E837D413&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:34:00 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:34AM 00.240</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048238140BC31B.F67DDA2E" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:27AM 50.833</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">2104ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048238140BC31B.F67DDA2E&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:27:52 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:27AM 52.160</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048237FE3A79E5.70EBCED2" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:21AM 45.394</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1505ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048237FE3A79E5.70EBCED2&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:21:46 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:21AM 46.318</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048237E7346DFB.6BD5EE10" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:15AM 19.536</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1091ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048237E7346DFB.6BD5EE10&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:15:20 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:15AM 20.475</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048237D13A78B4.13D4BA0C" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:09AM 10.060</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1864ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048237D13A78B4.13D4BA0C&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:09:11 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:09AM 11.807</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048237BB28B2A9.CE37AC64" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 02:03AM 00.637</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1023ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+855cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048237BB28B2A9.CE37AC64&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:02:03:01 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 02:03AM 01.531</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-00048237A52E33EC.24FA5F5E" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 01:56AM 51.781</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1142ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+875cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=00048237A52E33EC.24FA5F5E&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:01:56:52 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 01:56AM 52.756</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482378EDE963C.EF996963" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 01:50AM 35.380</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">3226ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482378EDE963C.EF996963&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:01:50:38 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 01:50AM 38.407</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823777B41921.A0F9E246" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 01:44AM 08.944</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1001ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+933cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823777B41921.A0F9E246&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:01:44:09 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 01:44AM 09.809</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823761DAE17C.22EB24AA" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 01:38AM 02.262</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1126ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+894cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823761DAE17C.22EB24AA&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:01:38:03 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 01:38AM 03.261</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-000482374BE750F0.97007FAE" class="ae-log">
+<ol
+
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 01:31AM 54.070</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">1035ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+913cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=000482374BE750F0.97007FAE&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:01:31:55 -0700] &quot;GET / HTTP/1.1&quot; 200 59 - &quot;curl/7.19.4 (universal-apple-darwin10.0) libcurl/7.19.4 OpenSSL/0.9.8l zlib/1.2.3,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 01:31AM 54.950</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li id="ae-log-0004823723DA4D5F.41621570" class="ae-log">
+<ol
+
+  class="ae-even"
+
+>
+<li class="ae-logs-reqlog">
+<h5>
+<span>03-20 01:20AM 42.208</span>
+<span class="file">/</span>
+<span class="snippet" title="Status">200</span>
+<span class="snippet" title="Request Time/Latency">955ms</span>
+<span class="snippet ae-alert ae-warning-text" title="This request used a high amount of CPU and should be optimized">
+796cpu_ms
+</span>
+<span class="snippet" title="Response Size">0kb</span>
+<span class="snippet" title="User Agent">Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.307.11 Safari/532.9,gzip(gfe)</span>
+</h5>
+<a
+      target="_blank"
+      href="/logs/log_detail?app_id=scala-spinup-check&version_id=simplescala.340664240352606159&request_id=0004823723DA4D5F.41621570&layout=plain"
+      class="ae-logs-getdetails">See details</a>
+<pre class="ae-pre-wrap">58.88.205.1 - - [20/Mar/2010:01:20:43 -0700] &quot;GET / HTTP/1.1&quot; 200 79 - &quot;Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.307.11 Safari/532.9,gzip(gfe)&quot;</pre>
+</li>
+<li class="ae-logs-applog">
+<h5>
+<span class="ae-logs-severity ae-logs-severity-1" title="Logging Severity: Info">
+I
+</span>
+<span>03-20 01:20AM 43.050</span>
+<span class="snippet">com.yuroyoro.scala.spinupcheck.IndexController init: Initialized IndexController
+</span>
+</h5>
+</li>
+</ol>
+</li>
+<li class="ae-table-caption">
+<div class="ae-paginate">
+<span class="ae-disabled ae-paginate-prev"
+        >‹ Prev 50</span>
+<strong>
+1-50
+</strong>
+<span class="ae-disabled ae-paginate-next"
+        >Next 50 ›</span>
+</div>
+</li>
+</ol>
+</div>
+<div id="ae-logs-legend" class="g-section">
+<strong>Legend:</strong>
+<ul>
+<li id="ae-logs-legend-Debug">
+<span class="ae-logs-severity ae-logs-severity-0">D</span> Debug (least severe)
+</li>
+<li>
+<span class="ae-logs-severity ae-logs-severity-1">I</span> Info
+</li>
+<li
+        ><span class="ae-logs-severity ae-logs-severity-2">W</span> Warning
+</li>
+<li>
+<span class="ae-logs-severity ae-logs-severity-3">E</span> Error
+</li>
+<li>
+<span class="ae-logs-severity ae-logs-severity-4">C</span> Critical (most severe)
+</li>
+</ul>
+</div>
+</div>
+<script type="text/javascript"><!--
+  ae.Logs.init();
+//--></script>
+</div>
+</div>
+<div id="ft">
+&#169; 2008 Google | <a href="http://code.google.com/appengine/terms.html">Terms of Service</a>
+| <a href="http://code.google.com/appengine/privacy.html">Privacy Policy</a>
+| <a href="http://googleappengine.blogspot.com">Blog</a>
+| <a href="http://groups.google.com/group/google-appengine">Discussion Forums</a>
+</div>
+<script><!--
+  ae.init();
+--></script>
+<script><!--
+  var gaJsHost = (('https:' == document.location.protocol) ?
+      'https://ssl.' : 'http://www.');
+  if (gaJsHost) {
+    document.write(unescape("%3Cscript src='" + gaJsHost +
+        "google-analytics.com/ga.js' " +
+        "type='text/javascript'%3E%3C/script%3E"));
+  }
+--></script>
+<script><!--
+  if (_gat) {
+    ae.initAnalytics(_gat);
+  }
+--></script>
+</div>
+</body>
+</html>
