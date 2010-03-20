@@ -50,6 +50,7 @@ object SpinUpLog{
 
   def main( args:String ) = {
     FileOut("log.txt",
-      agregate("simplescala") + agregate("listscala") + agregate("slim3scala"))
+      agregate("simplescala") + agregate("listscala") +
+      agregate("slim3scala")  + agregate("slim3listscala"))
   }
 }
